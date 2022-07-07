@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="John Doe">
+  <meta name="description" content="Describe your website">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <title>hugo &#43; github &middot; Spectre Pixel Theme</title>
+
+  <link rel="shortcut icon" href="https://wogns2645.github.io/images/favicon.ico">
+  <link rel="stylesheet" href="https://wogns2645.github.io/css/spectre.min.css">
+  <link rel="stylesheet" href="https://wogns2645.github.io/css/style.css">
+  <link rel="stylesheet" href="https://wogns2645.github.io/css/highlight.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  
+
+  
+    <link href="" rel="alternate" type="application/rss+xml" title="Spectre Pixel Theme" />
+  
+
+  
+  <meta property="og:title" content="hugo &#43; github" />
+<meta property="og:description" content="brew install hugo # Github repository 2개 생성 (blog, {username}.github.io) # 프로젝트 생성 hugo new site blog git init # themes(https://themes.gohugo.io/) # theme 경로 themes/theme 이름 git submodule add https://github.com/st-wong/hugo-spectre-pixel-theme.git themes/spectre-pixel # config 복사 cp blog/themes/spectre-pixel/exampleSite/config.toml blog/config.toml # config.toml 수정 # baseurl = &#34;https://&lt;username&gt;.github.io/&#34; # 서버 실행 (localhost:1313) hugo server # 배포 # blog/deploy.sh 루트 디렉토리에 생성 deploy.sh #!/bin/bash echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34; # Build the project. # hugo -t 테마명 hugo -t spectre-pixel # Go To Public folder, sub module commit cd public # Add changes to git." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wogns2645.github.io/post/test/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-08-28T21:48:13+09:00" />
+<meta property="article:modified_time" content="2020-08-28T21:48:13+09:00" />
+
+
+  
+  <meta itemprop="name" content="hugo &#43; github">
+<meta itemprop="description" content="brew install hugo # Github repository 2개 생성 (blog, {username}.github.io) # 프로젝트 생성 hugo new site blog git init # themes(https://themes.gohugo.io/) # theme 경로 themes/theme 이름 git submodule add https://github.com/st-wong/hugo-spectre-pixel-theme.git themes/spectre-pixel # config 복사 cp blog/themes/spectre-pixel/exampleSite/config.toml blog/config.toml # config.toml 수정 # baseurl = &#34;https://&lt;username&gt;.github.io/&#34; # 서버 실행 (localhost:1313) hugo server # 배포 # blog/deploy.sh 루트 디렉토리에 생성 deploy.sh #!/bin/bash echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34; # Build the project. # hugo -t 테마명 hugo -t spectre-pixel # Go To Public folder, sub module commit cd public # Add changes to git."><meta itemprop="datePublished" content="2020-08-28T21:48:13+09:00" />
+<meta itemprop="dateModified" content="2020-08-28T21:48:13+09:00" />
+<meta itemprop="wordCount" content="162">
+<meta itemprop="keywords" content="hugo,blog," />
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="hugo &#43; github"/>
+<meta name="twitter:description" content="brew install hugo # Github repository 2개 생성 (blog, {username}.github.io) # 프로젝트 생성 hugo new site blog git init # themes(https://themes.gohugo.io/) # theme 경로 themes/theme 이름 git submodule add https://github.com/st-wong/hugo-spectre-pixel-theme.git themes/spectre-pixel # config 복사 cp blog/themes/spectre-pixel/exampleSite/config.toml blog/config.toml # config.toml 수정 # baseurl = &#34;https://&lt;username&gt;.github.io/&#34; # 서버 실행 (localhost:1313) hugo server # 배포 # blog/deploy.sh 루트 디렉토리에 생성 deploy.sh #!/bin/bash echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34; # Build the project. # hugo -t 테마명 hugo -t spectre-pixel # Go To Public folder, sub module commit cd public # Add changes to git."/>
+<meta name="twitter:site" content="@https://www.twitter.com/"/>
+
+</head>
+
+<body onload="setPixelFont()">
+  <div class="container p-fixed" style="z-index:3">
+  <nav class="navbar m-2 p-2 s-rounded shadow bg-primary">
+    <section class="navbar-section">
+      <button class="btn btn-action btn-primary s-circle text-gray" id="pixelfont-toggle"><i class="fas fa-robot fa-lg"></i></button>
+    </section>
+    <section class="navbar-section">
+      
+        <a class="btn btn-primary" href='https://wogns2645.github.io/'>Home</a>
+      
+
+      
+
+      
+      <a class="btn btn-accent" href="" target="_blank"><i class="fas fa-rss fa-lg"></i></a>
+      
+    </section>
+  </nav>
+</div>
+
+  <section class="container grid-md">
+  <div class="columns">
+    
+    
+<article class="container p-centered mt-space">
+  <header>
+    <h2 class="text-center">hugo &#43; github</h2>
+    <h6 class="text-gray text-italic"></h6>
+  </header>
+  <section class="my-gap">
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Github repository 2개 생성 (blog, {username}.github.io)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 프로젝트 생성</span>
+</span></span><span style="display:flex;"><span>hugo new site blog
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># themes(https://themes.gohugo.io/)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># theme 경로 themes/theme 이름</span>
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/st-wong/hugo-spectre-pixel-theme.git themes/spectre-pixel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># config 복사</span>
+</span></span><span style="display:flex;"><span>cp blog/themes/spectre-pixel/exampleSite/config.toml blog/config.toml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># config.toml 수정</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># baseurl = &#34;https://&lt;username&gt;.github.io/&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 서버 실행 (localhost:1313)</span>
+</span></span><span style="display:flex;"><span>hugo server
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 배포</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># blog/deploy.sh 루트 디렉토리에 생성</span>
+</span></span></code></pre></div><h6 id="deploysh">deploy.sh</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Build the project.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># hugo -t 테마명</span>
+</span></span><span style="display:flex;"><span>hugo -t spectre-pixel
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Go To Public folder, sub module commit</span>
+</span></span><span style="display:flex;"><span>cd public
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add changes to git.</span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Commit changes.</span>
+</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Push source and build repos.</span>
+</span></span><span style="display:flex;"><span>git push origin master
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Come Back up to the Project Root</span>
+</span></span><span style="display:flex;"><span>cd ..
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># blog 저장소 Commit &amp; Push</span>
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>git push origin master
+</span></span></code></pre></div>
+
+    
+      <code class="text-bold">Tags</code> 
+      
+        <a class="chip text-accent" href="https://wogns2645.github.io/tags/hugo">hugo</a>
+      
+        <a class="chip text-accent" href="https://wogns2645.github.io/tags/blog">blog</a>
+      
+    
+  </section>
+  <div class="divider my-gap"></div>
+  <footer class="col-12 d-inline-block">
+    <span class="float-left">
+      <button class="btn btn-action btn-accent shadow s-circle" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></button>
+    </span>
+    <span class="float-right">
+      <div class="text-right float-left mx-2">
+        <span class="text-dark">John Doe</span><br>
+        <span class="text-gray">I&#39;m a Programmer.</span>
+      </div>
+      <figure class="avatar avatar-lg">
+        <img id="profile">
+      </figure>
+    </span>
+  </footer>
+</article>
+
+    <footer class="container p-centered text-center my-gap">
+  
+    <div class="container">
+
+  
+    <a class="symbol" href="mailto:john.doe@email.com" target="_blank"><i class="fas fa-envelope"></i>
+  
+  </a>
+
+  
+    <a class="symbol" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i>
+  
+  </a>
+
+  
+    <a class="symbol" href="https://www.github.com/" target="_blank"><i class="fab fa-github"></i>
+  
+  </a>
+
+  
+    <a class="symbol" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i>
+  
+  </a>
+
+  
+    <a class="symbol" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i>
+  
+  </a>
+
+</div>
+
+  
+
+  <small class="text-gray">
+  
+    © Copyright 2022 John Doe
+  
+  </small>
+</footer>
+
+  </div>
+  </section>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://wogns2645.github.io/js/main.js"></script>
+<script src="https://wogns2645.github.io/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>
