@@ -13,7 +13,7 @@
       <pubDate>Fri, 28 Aug 2020 21:48:13 +0900</pubDate>
       
       <guid>https://wogns2645.github.io/post/test/</guid>
-      <description>hugo 설치/설정 brew install hugo # Github repository 2개 생성 (blog, {username}.github.io) # 프로젝트 생성 hugo new site blog git init # themes(https://themes.gohugo.io/) # theme 경로 themes/theme 이름 git submodule add https://github.com/st-wong/hugo-spectre-pixel-theme.git themes/spectre-pixel # config 복사 cp blog/themes/spectre-pixel/exampleSite/config.toml blog/config.toml # config.toml 수정 # baseurl = &amp;#34;https://&amp;lt;username&amp;gt;.github.io/&amp;#34; # 서버 실행 (localhost:1313) hugo server # Github blog repository 연결 git remote add origin https://{token}@github.com/wogns2645/blog.git # Github {username}.github.io repository 연결 git submodule add -b master https://github.</description>
+      <description>hugo 설치 brew install hugo # Github repository 2개 생성 (blog, {username}.github.io) # 프로젝트 생성 hugo new site blog git init # themes(https://themes.gohugo.io/) # theme 경로 themes/theme 이름 git submodule add https://github.com/st-wong/hugo-spectre-pixel-theme.git themes/spectre-pixel # config 복사 cp blog/themes/spectre-pixel/exampleSite/config.toml blog/config.toml # config.toml 수정 # baseurl = &amp;#34;https://&amp;lt;username&amp;gt;.github.io/&amp;#34; # 서버 실행 (localhost:1313) hugo server # Github blog repository 연결 git remote add origin https://{token}@github.com/wogns2645/blog.git # Github {username}.github.io repository 연결 git submodule add -b master https://github.</description>
     </item>
     
   </channel>
