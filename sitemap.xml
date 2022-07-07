@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wogns2645.github.io/tags/db/</loc>
+    <loc>https://wogns2645.github.io/post/redis/</loc>
     <lastmod>2020-08-28T21:48:14+09:00</lastmod>
   </url><url>
     <loc>https://wogns2645.github.io/tags/nosql/</loc>
@@ -14,7 +14,7 @@
     <loc>https://wogns2645.github.io/tags/redis/</loc>
     <lastmod>2020-08-28T21:48:14+09:00</lastmod>
   </url><url>
-    <loc>https://wogns2645.github.io/post/redis/</loc>
+    <loc>https://wogns2645.github.io/tags/redis-server/</loc>
     <lastmod>2020-08-28T21:48:14+09:00</lastmod>
   </url><url>
     <loc>https://wogns2645.github.io/</loc>

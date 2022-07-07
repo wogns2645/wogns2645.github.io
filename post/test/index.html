@@ -76,42 +76,42 @@
   </header>
   <section class="my-gap">
     <h6 id="hugo-설치">hugo 설치</h6>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Github repository 2개 생성 (blog, {username}.github.io)</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 프로젝트 생성</span>
-</span></span><span style="display:flex;"><span>hugo new site blog
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>git init
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># themes(https://themes.gohugo.io/)</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># theme 경로 themes/theme 이름</span>
-</span></span><span style="display:flex;"><span>git submodule add https://github.com/st-wong/hugo-spectre-pixel-theme.git themes/spectre-pixel
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># config 복사</span>
-</span></span><span style="display:flex;"><span>cp blog/themes/spectre-pixel/exampleSite/config.toml blog/config.toml
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># config.toml 수정</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># baseurl = &#34;https://&lt;username&gt;.github.io/&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 서버 실행 (localhost:1313)</span>
-</span></span><span style="display:flex;"><span>hugo server
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Github blog repository 연결</span>
-</span></span><span style="display:flex;"><span>git remote add origin https://<span style="color:#f92672">{</span>token<span style="color:#f92672">}</span>@github.com/wogns2645/blog.git
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Github {username}.github.io repository 연결</span>
-</span></span><span style="display:flex;"><span>git submodule add -b master https://github.com/wogns2645/wogns2645.github.io.git public
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 배포</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># blog/deploy.sh 루트 디렉토리에 생성</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 권한 / 실행</span>
-</span></span><span style="display:flex;"><span>chmod <span style="color:#ae81ff">777</span> blog/deploy.sh
-</span></span><span style="display:flex;"><span>./deploy.sh
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 게시글 생성</span>
-</span></span><span style="display:flex;"><span>hugo new post/blod.md
-</span></span></code></pre></div><h6 id="git-remotesubmodule-초기화">git remote/submodule 초기화</h6>
+<pre tabindex="0"><code>brew install hugo
+
+# Github repository 2개 생성 (blog, {username}.github.io)
+# 프로젝트 생성
+hugo new site blog
+
+git init
+
+# themes(https://themes.gohugo.io/)
+# theme 경로 themes/theme 이름
+git submodule add https://github.com/st-wong/hugo-spectre-pixel-theme.git themes/spectre-pixel
+
+# config 복사
+cp blog/themes/spectre-pixel/exampleSite/config.toml blog/config.toml
+
+# config.toml 수정
+# baseurl = &#34;https://&lt;username&gt;.github.io/&#34;
+
+# 서버 실행 (localhost:1313)
+hugo server
+
+# Github blog repository 연결
+git remote add origin https://{token}@github.com/wogns2645/blog.git
+
+# Github {username}.github.io repository 연결
+git submodule add -b master https://github.com/wogns2645/wogns2645.github.io.git public
+
+# 배포
+# blog/deploy.sh 루트 디렉토리에 생성
+# 권한 / 실행
+chmod 777 blog/deploy.sh
+./deploy.sh
+
+# 게시글 생성
+hugo new post/blod.md
+</code></pre><h6 id="git-remotesubmodule-초기화">git remote/submodule 초기화</h6>
 <pre tabindex="0"><code>git remote remove origin
 rm -rf public
 rm -rf .git/modules/{submodule}
@@ -122,44 +122,44 @@ git ls-files --stage {폴더 경로}
 # 캐시 삭제
 git rm --cached {폴더 경로}
 </code></pre><h6 id="deploysh">deploy.sh</h6>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Build the project.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># hugo -t 테마명</span>
-</span></span><span style="display:flex;"><span>hugo -t spectre-pixel
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Go To Public folder, sub module commit</span>
-</span></span><span style="display:flex;"><span>cd public
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add changes to git.</span>
-</span></span><span style="display:flex;"><span>git add .
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Commit changes.</span>
-</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Push source and build repos.</span>
-</span></span><span style="display:flex;"><span>git push origin master
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Come Back up to the Project Root</span>
-</span></span><span style="display:flex;"><span>cd ..
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># blog 저장소 Commit &amp; Push</span>
-</span></span><span style="display:flex;"><span>git add .
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>git push origin master
-</span></span></code></pre></div>
+<pre tabindex="0"><code>#!/bin/bash
+
+echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;
+
+# Build the project.
+# hugo -t 테마명
+hugo -t spectre-pixel
+
+# Go To Public folder, sub module commit
+cd public
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&#34;rebuilding site `date`&#34;
+if [ $# -eq 1 ]
+  then msg=&#34;$1&#34;
+fi
+git commit -m &#34;$msg&#34;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..
+
+
+# blog 저장소 Commit &amp; Push
+git add .
+
+msg=&#34;rebuilding site `date`&#34;
+if [ $# -eq 1 ]
+  then msg=&#34;$1&#34;
+fi
+git commit -m &#34;$msg&#34;
+
+git push origin master
+</code></pre>
 
     
       <code class="text-bold">Tags</code> 

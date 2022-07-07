@@ -8,15 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Aug 2020 21:48:14 +0900</lastBuildDate><atom:link href="https://wogns2645.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>db</title>
-      <link>https://wogns2645.github.io/tags/db/</link>
-      <pubDate>Fri, 28 Aug 2020 21:48:14 +0900</pubDate>
-      
-      <guid>https://wogns2645.github.io/tags/db/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>nosql</title>
       <link>https://wogns2645.github.io/tags/nosql/</link>
       <pubDate>Fri, 28 Aug 2020 21:48:14 +0900</pubDate>
@@ -31,6 +22,15 @@
       <pubDate>Fri, 28 Aug 2020 21:48:14 +0900</pubDate>
       
       <guid>https://wogns2645.github.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redis-server</title>
+      <link>https://wogns2645.github.io/tags/redis-server/</link>
+      <pubDate>Fri, 28 Aug 2020 21:48:14 +0900</pubDate>
+      
+      <guid>https://wogns2645.github.io/tags/redis-server/</guid>
       <description></description>
     </item>
     

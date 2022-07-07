@@ -8,14 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Aug 2020 21:48:14 +0900</lastBuildDate><atom:link href="https://wogns2645.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Redis</title>
+      <title>[linux] redis 설치</title>
       <link>https://wogns2645.github.io/post/redis/</link>
       <pubDate>Fri, 28 Aug 2020 21:48:14 +0900</pubDate>
       
       <guid>https://wogns2645.github.io/post/redis/</guid>
-      <description>redis
-redis
-redis redis redis redis redisredisredisredisredisredis</description>
+      <description>Amazon Linux 2 환경에서 redis 설치 # yum udpate sudo yum -y update # C 컴파일러 설치 sudo yum -y install gcc make # redis 설치 wget http://download.redis.io/redis-stable.tar.gz tar xvzf redis-stable.tar.gz cd redis-stable make # redis 설정 파일 복사 sudo mkdir /etc/redis sudo mkdir /var/lib/redis cd redis-stable sudo cp src/redis-server src/redis-cli /usr/local/bin cp redis.conf /etc/redis # redis 스크립트 다운로드 wget https://raw.github.com/saxenap/install-redis-amazon-linux-centos/master/redis-server cd /usr/local/bin sudo mv redis-server /etc/init.d sudo chmod 755 /etc/init.</description>
     </item>
     
     <item>
